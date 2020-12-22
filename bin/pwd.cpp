@@ -1,4 +1,5 @@
 #include "builtin.h"
+#include "../myio.h"
 
 #include <cstdio>
 #include <unistd.h>
@@ -6,7 +7,7 @@
 
 int mypwd(char **argv)
 {
-    get_current_dir_name();
-    //printf()
+    char* s = get_current_dir_name();
+    Print(s);
     return 0;
 }

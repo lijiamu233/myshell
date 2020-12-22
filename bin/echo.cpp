@@ -1,5 +1,5 @@
 #include "builtin.h"
-
+#include "../myio.h"
 #include <cstdio>
 #include <cstdlib>
 
@@ -7,9 +7,9 @@ int myecho(char **argv)
 {
     for(int i = 1; argv[i]; i++)
     {
-        if(i); //out\n
-        //out
+        if(i) Print(" ");
+        Print(argv[i]);
     }
-    //out\n
+    Print("\n");
     return 0;
 }

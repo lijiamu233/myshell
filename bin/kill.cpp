@@ -1,5 +1,5 @@
 #include "builtin.h"
-
+#include "../myio.h"
 #include <cstdio>
 #include <cstdlib>
 
@@ -10,7 +10,7 @@ int mykill(char **argv)
 {
     if(!argv[1])
     {
-        //err;
+        Err("kill: require more arguments\n");
         return 1;
     }
     int pid = atoi(argv[1]);
