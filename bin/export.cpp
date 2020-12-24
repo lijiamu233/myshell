@@ -4,7 +4,7 @@
 #include <cstring>
 #include <cstdlib>
 #include <unistd.h>
-#define __USE_GNU
+
 int myexport(char **argv)
 {
     int ret = 0;
@@ -13,7 +13,7 @@ int myexport(char **argv)
         for(int i = 0; environ[i]; i++)
         {
             Print(environ[i]);
-            Print("/n");
+            Print("\n");
         }
     }
     else

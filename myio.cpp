@@ -3,7 +3,10 @@
 #include <readline/readline.h>
 #include <readline/history.h>
 #include <cstring>
+#include <unistd.h>
+#include <pwd.h>
 #include "myio.h"
+#include "bin/builtin.h"
 
 #define DELIM " \t\r\n\a"
 #define BUF_SIZE 1024
@@ -14,7 +17,15 @@ FILE* stream[3];
 char* myreadline(FILE* in)
 {
     char *rd = nullptr;
-    rd = readline("$ ");
+    struct passwd *pwd = getpwuid(getuid());
+    printf("\033[34m# ");
+    printf("\033[34m%s",pwd->pw_name);
+    printf("\033[37m @ ");
+    printf("\033[32m%s",pwd->pw_dir);
+    printf("\033[37m in ");
+    printf("\033[33m%s\n",get_current_dir_name());
+    printf("\033[31m$ ");
+    rd = readline("\33[0m");
     return rd;
 }
 
@@ -34,9 +45,10 @@ char** mydealstring(char* command)
     while(token != nullptr)
     {
         tokens[total++] = token;
-
+        //fprintf(stderr, "myshell: loop loop error.\n");
         if(total >= len)
         {
+            
             len+=BUF_SIZE;
             tokens = (char **)realloc(tokens, sizeof(char *) * len);
             if(tokens == nullptr)
@@ -46,7 +58,7 @@ char** mydealstring(char* command)
             }
         }
 
-        token = strtok(command, DELIM); 
+        token = strtok(nullptr, DELIM); 
     }
     tokens[total] = nullptr;
     return tokens;
@@ -62,7 +74,7 @@ void Flush(char *s)
     fflush(stream[FD_STDOUT]);
 }
 
-void Err(char *s)
+void Err(const char *s)
 {
     fprintf(stream[FD_STDERR], "%s", s);
 }

@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lijiamu/下载/Lab_newbie_task/myshell/bin/builtin.h
+
+/home/lijiamu/下载/Lab_newbie_task/myshell/myio.cpp
+cstdio
+-
+cstdlib
+-
+readline/readline.h
+-
+readline/history.h
+-
+cstring
+-
+unistd.h
+-
+pwd.h
+-
+myio.h
+/home/lijiamu/下载/Lab_newbie_task/myshell/myio.h
+bin/builtin.h
+/home/lijiamu/下载/Lab_newbie_task/myshell/bin/builtin.h
+
+/home/lijiamu/下载/Lab_newbie_task/myshell/myio.h
+cstdio
+-
+

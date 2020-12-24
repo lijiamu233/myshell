@@ -5,5 +5,5 @@ char* myreadline(FILE *in);
 char **mydealstring(char* command);
 void Print(char *s);
 void Flush(char *s);
-void Err(char *s);
+void Err(const char *s);
 #endif

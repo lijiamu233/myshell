@@ -9,5 +9,6 @@ int mypwd(char **argv)
 {
     char* s = get_current_dir_name();
     Print(s);
+    Print("\n");
     return 0;
 }

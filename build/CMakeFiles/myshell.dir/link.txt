@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/myshell.dir/main.cpp.o CMakeFiles/myshell.dir/myio.cpp.o CMakeFiles/myshell.dir/myexec.cpp.o CMakeFiles/myshell.dir/bin/cd.cpp.o CMakeFiles/myshell.dir/bin/echo.cpp.o CMakeFiles/myshell.dir/bin/export.cpp.o CMakeFiles/myshell.dir/bin/kill.cpp.o CMakeFiles/myshell.dir/bin/pwd.cpp.o -o myshell  -lreadline 

@@ -1,0 +1,3 @@
+/home/lijiamu/下载/Lab_newbie_task/myshell/build/CMakeFiles/rebuild_cache.dir
+/home/lijiamu/下载/Lab_newbie_task/myshell/build/CMakeFiles/edit_cache.dir
+/home/lijiamu/下载/Lab_newbie_task/myshell/build/CMakeFiles/myshell.dir
