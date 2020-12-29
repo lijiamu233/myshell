@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lijiamu/下载/Lab_newbie_task/myshell/adv/cat.cpp
+unistd.h
+-
+cstdlib
+-
+cstring
+-
+cstdio
+-
+signal.h
+-
+sys/stat.h
+-
+sys/types.h
+-
+sys/wait.h
+-
+fcntl.h
+-
+errno.h
+-
+

@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/cat.dir/adv/cat.cpp.o -o bin/cat 

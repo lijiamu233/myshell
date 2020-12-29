@@ -216,7 +216,7 @@ myshell_BINARY_DIR:STATIC=/home/lijiamu/下载/Lab_newbie_task/myshell/build
 myshell_SOURCE_DIR:STATIC=/home/lijiamu/下载/Lab_newbie_task/myshell
 
 //Path to a library.
-readline:FILEPATH=/usr/include/readline/
+readline:FILEPATH=/usr/include/readline
 
 
 ########################

@@ -45,5 +45,13 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/mv.dir/DependInfo.cmake"
+  "CMakeFiles/xargs.dir/DependInfo.cmake"
+  "CMakeFiles/cp.dir/DependInfo.cmake"
+  "CMakeFiles/rm.dir/DependInfo.cmake"
+  "CMakeFiles/mkdir.dir/DependInfo.cmake"
+  "CMakeFiles/ls.dir/DependInfo.cmake"
+  "CMakeFiles/touch.dir/DependInfo.cmake"
+  "CMakeFiles/cat.dir/DependInfo.cmake"
   "CMakeFiles/myshell.dir/DependInfo.cmake"
   )

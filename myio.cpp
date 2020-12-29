@@ -18,7 +18,7 @@ char* myreadline(FILE* in)
 {
     char *rd = nullptr;
     struct passwd *pwd = getpwuid(getuid());
-    printf("\033[34m# ");
+    printf("\n\033[34m# ");
     printf("\033[34m%s",pwd->pw_name);
     printf("\033[37m @ ");
     printf("\033[32m%s",pwd->pw_dir);

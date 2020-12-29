@@ -6,27 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/home/lijiamu/下载/Lab_newbie_task/myshell/bin/builtin.h
-
-/home/lijiamu/下载/Lab_newbie_task/myshell/myio.cpp
+/home/lijiamu/下载/Lab_newbie_task/myshell/main.cpp
 cstdio
 -
 cstdlib
 -
-readline/readline.h
--
-readline/history.h
--
-cstring
+signal.h
 -
 unistd.h
 -
-pwd.h
--
 myio.h
 /home/lijiamu/下载/Lab_newbie_task/myshell/myio.h
-bin/builtin.h
-/home/lijiamu/下载/Lab_newbie_task/myshell/bin/builtin.h
+myexec.h
+/home/lijiamu/下载/Lab_newbie_task/myshell/myexec.h
+
+/home/lijiamu/下载/Lab_newbie_task/myshell/myexec.h
+sys/types.h
+-
 
 /home/lijiamu/下载/Lab_newbie_task/myshell/myio.h
 cstdio

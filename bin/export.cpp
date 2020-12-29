@@ -21,7 +21,7 @@ int myexport(char **argv)
         for(int i = 1; argv[i]; i++)
         {
             char* position = strchr(argv[i], '=');
-            if(position != nullptr)
+            if(!position)
                 ret |= setenv(argv[i], "", 1);
             else
             {

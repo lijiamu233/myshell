@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/cp.dir/adv/cp.cpp.o -o bin/cp 

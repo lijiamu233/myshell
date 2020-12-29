@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lijiamu/下载/Lab_newbie_task/myshell/adv/xargs.cpp
+cstdio
+-
+cstdlib
+-
+cstring
+-
+sys/stat.h
+-
+sys/types.h
+-
+sys/wait.h
+-
+unistd.h
+-
+

@@ -13,7 +13,7 @@ int main(int argc, char **argv)
         int err = 0;
         for(int i = 1; i < argc; i++)
         {
-            err |= mkdir(argv[i], 777);
+            err |= mkdir(argv[i], 0777);
             if (err)
             fprintf(stderr, "mkdir: %s\n", strerror(errno));
         }

@@ -39,7 +39,6 @@ int myexec_extern(char **command, bool isbg)
     }
     else if(ppid < 0)
         perror("myshell");
-    
     else
     {
         if (!isbg)
@@ -65,6 +64,7 @@ int isbuiltin(char *cmd)
 }
 int myexec_bin(char **command,int type)
 {
+    signal(SIGINT, SIG_DFL);
     if(command == nullptr || command[0] == nullptr) return 0;
     int ret = 0;
     bool Canexe = true;
@@ -182,5 +182,6 @@ int myexec_bin(char **command,int type)
     if(Canexe) myexec_bin(pipe_prev, fd_pipe[0]);
     else Err("paradoxible pipe and redirect\n");
     if(fd_pipe[0] != -1) close(fd_pipe[0]);
+    signal(SIGINT, SIG_IGN);
     return ret;
 }

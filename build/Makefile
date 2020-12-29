@@ -75,17 +75,6 @@ CMAKE_BINARY_DIR = /home/lijiamu/下载/Lab_newbie_task/myshell/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -96,6 +85,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -130,6 +130,110 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named mv
+
+# Build rule for target.
+mv: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mv
+.PHONY : mv
+
+# fast build rule for target.
+mv/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mv.dir/build.make CMakeFiles/mv.dir/build
+.PHONY : mv/fast
+
+#=============================================================================
+# Target rules for targets named xargs
+
+# Build rule for target.
+xargs: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 xargs
+.PHONY : xargs
+
+# fast build rule for target.
+xargs/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/xargs.dir/build.make CMakeFiles/xargs.dir/build
+.PHONY : xargs/fast
+
+#=============================================================================
+# Target rules for targets named cp
+
+# Build rule for target.
+cp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cp
+.PHONY : cp
+
+# fast build rule for target.
+cp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cp.dir/build.make CMakeFiles/cp.dir/build
+.PHONY : cp/fast
+
+#=============================================================================
+# Target rules for targets named rm
+
+# Build rule for target.
+rm: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rm
+.PHONY : rm
+
+# fast build rule for target.
+rm/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rm.dir/build.make CMakeFiles/rm.dir/build
+.PHONY : rm/fast
+
+#=============================================================================
+# Target rules for targets named mkdir
+
+# Build rule for target.
+mkdir: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mkdir
+.PHONY : mkdir
+
+# fast build rule for target.
+mkdir/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mkdir.dir/build.make CMakeFiles/mkdir.dir/build
+.PHONY : mkdir/fast
+
+#=============================================================================
+# Target rules for targets named ls
+
+# Build rule for target.
+ls: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ls
+.PHONY : ls
+
+# fast build rule for target.
+ls/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ls.dir/build.make CMakeFiles/ls.dir/build
+.PHONY : ls/fast
+
+#=============================================================================
+# Target rules for targets named touch
+
+# Build rule for target.
+touch: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 touch
+.PHONY : touch
+
+# fast build rule for target.
+touch/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/touch.dir/build.make CMakeFiles/touch.dir/build
+.PHONY : touch/fast
+
+#=============================================================================
+# Target rules for targets named cat
+
+# Build rule for target.
+cat: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cat
+.PHONY : cat
+
+# fast build rule for target.
+cat/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cat.dir/build.make CMakeFiles/cat.dir/build
+.PHONY : cat/fast
+
+#=============================================================================
 # Target rules for targets named myshell
 
 # Build rule for target.
@@ -141,6 +245,222 @@ myshell: cmake_check_build_system
 myshell/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/myshell.dir/build.make CMakeFiles/myshell.dir/build
 .PHONY : myshell/fast
+
+adv/cat.o: adv/cat.cpp.o
+
+.PHONY : adv/cat.o
+
+# target to build an object file
+adv/cat.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cat.dir/build.make CMakeFiles/cat.dir/adv/cat.cpp.o
+.PHONY : adv/cat.cpp.o
+
+adv/cat.i: adv/cat.cpp.i
+
+.PHONY : adv/cat.i
+
+# target to preprocess a source file
+adv/cat.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cat.dir/build.make CMakeFiles/cat.dir/adv/cat.cpp.i
+.PHONY : adv/cat.cpp.i
+
+adv/cat.s: adv/cat.cpp.s
+
+.PHONY : adv/cat.s
+
+# target to generate assembly for a file
+adv/cat.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cat.dir/build.make CMakeFiles/cat.dir/adv/cat.cpp.s
+.PHONY : adv/cat.cpp.s
+
+adv/cp.o: adv/cp.cpp.o
+
+.PHONY : adv/cp.o
+
+# target to build an object file
+adv/cp.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cp.dir/build.make CMakeFiles/cp.dir/adv/cp.cpp.o
+.PHONY : adv/cp.cpp.o
+
+adv/cp.i: adv/cp.cpp.i
+
+.PHONY : adv/cp.i
+
+# target to preprocess a source file
+adv/cp.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cp.dir/build.make CMakeFiles/cp.dir/adv/cp.cpp.i
+.PHONY : adv/cp.cpp.i
+
+adv/cp.s: adv/cp.cpp.s
+
+.PHONY : adv/cp.s
+
+# target to generate assembly for a file
+adv/cp.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cp.dir/build.make CMakeFiles/cp.dir/adv/cp.cpp.s
+.PHONY : adv/cp.cpp.s
+
+adv/ls.o: adv/ls.cpp.o
+
+.PHONY : adv/ls.o
+
+# target to build an object file
+adv/ls.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ls.dir/build.make CMakeFiles/ls.dir/adv/ls.cpp.o
+.PHONY : adv/ls.cpp.o
+
+adv/ls.i: adv/ls.cpp.i
+
+.PHONY : adv/ls.i
+
+# target to preprocess a source file
+adv/ls.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ls.dir/build.make CMakeFiles/ls.dir/adv/ls.cpp.i
+.PHONY : adv/ls.cpp.i
+
+adv/ls.s: adv/ls.cpp.s
+
+.PHONY : adv/ls.s
+
+# target to generate assembly for a file
+adv/ls.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ls.dir/build.make CMakeFiles/ls.dir/adv/ls.cpp.s
+.PHONY : adv/ls.cpp.s
+
+adv/mkdir.o: adv/mkdir.cpp.o
+
+.PHONY : adv/mkdir.o
+
+# target to build an object file
+adv/mkdir.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mkdir.dir/build.make CMakeFiles/mkdir.dir/adv/mkdir.cpp.o
+.PHONY : adv/mkdir.cpp.o
+
+adv/mkdir.i: adv/mkdir.cpp.i
+
+.PHONY : adv/mkdir.i
+
+# target to preprocess a source file
+adv/mkdir.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mkdir.dir/build.make CMakeFiles/mkdir.dir/adv/mkdir.cpp.i
+.PHONY : adv/mkdir.cpp.i
+
+adv/mkdir.s: adv/mkdir.cpp.s
+
+.PHONY : adv/mkdir.s
+
+# target to generate assembly for a file
+adv/mkdir.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mkdir.dir/build.make CMakeFiles/mkdir.dir/adv/mkdir.cpp.s
+.PHONY : adv/mkdir.cpp.s
+
+adv/mv.o: adv/mv.cpp.o
+
+.PHONY : adv/mv.o
+
+# target to build an object file
+adv/mv.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mv.dir/build.make CMakeFiles/mv.dir/adv/mv.cpp.o
+.PHONY : adv/mv.cpp.o
+
+adv/mv.i: adv/mv.cpp.i
+
+.PHONY : adv/mv.i
+
+# target to preprocess a source file
+adv/mv.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mv.dir/build.make CMakeFiles/mv.dir/adv/mv.cpp.i
+.PHONY : adv/mv.cpp.i
+
+adv/mv.s: adv/mv.cpp.s
+
+.PHONY : adv/mv.s
+
+# target to generate assembly for a file
+adv/mv.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mv.dir/build.make CMakeFiles/mv.dir/adv/mv.cpp.s
+.PHONY : adv/mv.cpp.s
+
+adv/rm.o: adv/rm.cpp.o
+
+.PHONY : adv/rm.o
+
+# target to build an object file
+adv/rm.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rm.dir/build.make CMakeFiles/rm.dir/adv/rm.cpp.o
+.PHONY : adv/rm.cpp.o
+
+adv/rm.i: adv/rm.cpp.i
+
+.PHONY : adv/rm.i
+
+# target to preprocess a source file
+adv/rm.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rm.dir/build.make CMakeFiles/rm.dir/adv/rm.cpp.i
+.PHONY : adv/rm.cpp.i
+
+adv/rm.s: adv/rm.cpp.s
+
+.PHONY : adv/rm.s
+
+# target to generate assembly for a file
+adv/rm.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rm.dir/build.make CMakeFiles/rm.dir/adv/rm.cpp.s
+.PHONY : adv/rm.cpp.s
+
+adv/touch.o: adv/touch.cpp.o
+
+.PHONY : adv/touch.o
+
+# target to build an object file
+adv/touch.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/touch.dir/build.make CMakeFiles/touch.dir/adv/touch.cpp.o
+.PHONY : adv/touch.cpp.o
+
+adv/touch.i: adv/touch.cpp.i
+
+.PHONY : adv/touch.i
+
+# target to preprocess a source file
+adv/touch.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/touch.dir/build.make CMakeFiles/touch.dir/adv/touch.cpp.i
+.PHONY : adv/touch.cpp.i
+
+adv/touch.s: adv/touch.cpp.s
+
+.PHONY : adv/touch.s
+
+# target to generate assembly for a file
+adv/touch.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/touch.dir/build.make CMakeFiles/touch.dir/adv/touch.cpp.s
+.PHONY : adv/touch.cpp.s
+
+adv/xargs.o: adv/xargs.cpp.o
+
+.PHONY : adv/xargs.o
+
+# target to build an object file
+adv/xargs.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/xargs.dir/build.make CMakeFiles/xargs.dir/adv/xargs.cpp.o
+.PHONY : adv/xargs.cpp.o
+
+adv/xargs.i: adv/xargs.cpp.i
+
+.PHONY : adv/xargs.i
+
+# target to preprocess a source file
+adv/xargs.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/xargs.dir/build.make CMakeFiles/xargs.dir/adv/xargs.cpp.i
+.PHONY : adv/xargs.cpp.i
+
+adv/xargs.s: adv/xargs.cpp.s
+
+.PHONY : adv/xargs.s
+
+# target to generate assembly for a file
+adv/xargs.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/xargs.dir/build.make CMakeFiles/xargs.dir/adv/xargs.cpp.s
+.PHONY : adv/xargs.cpp.s
 
 bin/cd.o: bin/cd.cpp.o
 
@@ -366,7 +686,39 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... cat"
+	@echo "... cp"
+	@echo "... ls"
+	@echo "... mkdir"
+	@echo "... mv"
 	@echo "... myshell"
+	@echo "... rm"
+	@echo "... touch"
+	@echo "... xargs"
+	@echo "... adv/cat.o"
+	@echo "... adv/cat.i"
+	@echo "... adv/cat.s"
+	@echo "... adv/cp.o"
+	@echo "... adv/cp.i"
+	@echo "... adv/cp.s"
+	@echo "... adv/ls.o"
+	@echo "... adv/ls.i"
+	@echo "... adv/ls.s"
+	@echo "... adv/mkdir.o"
+	@echo "... adv/mkdir.i"
+	@echo "... adv/mkdir.s"
+	@echo "... adv/mv.o"
+	@echo "... adv/mv.i"
+	@echo "... adv/mv.s"
+	@echo "... adv/rm.o"
+	@echo "... adv/rm.i"
+	@echo "... adv/rm.s"
+	@echo "... adv/touch.o"
+	@echo "... adv/touch.i"
+	@echo "... adv/touch.s"
+	@echo "... adv/xargs.o"
+	@echo "... adv/xargs.i"
+	@echo "... adv/xargs.s"
 	@echo "... bin/cd.o"
 	@echo "... bin/cd.i"
 	@echo "... bin/cd.s"

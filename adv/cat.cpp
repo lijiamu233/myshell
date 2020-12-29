@@ -10,7 +10,7 @@
 #include <fcntl.h>
 #include <errno.h>
 
-void cat(int f)
+void show(int f)
 {
     char buf[1024];
     int len = 0;
@@ -23,7 +23,7 @@ void cat(int f)
 int main(int argc, char** argv)
 {
     if (argc == 1)
-        cat(STDIN_FILENO);
+        show(STDIN_FILENO);
     else
     {
         for (int i = 1; i < argc; i++)
@@ -31,7 +31,7 @@ int main(int argc, char** argv)
             int f = open(argv[i], O_RDONLY);
             if (f > 0)
             {
-                cat(f);
+                show(f);
                 close(f);
             }
             else
