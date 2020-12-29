@@ -6,19 +6,35 @@
 
 #IncludeRegexTransform: 
 
-/home/lijiamu/下载/Lab_newbie_task/myshell/main.cpp
-cstdio
+/home/lijiamu/下载/Lab_newbie_task/myshell/bin/builtin.h
+
+/home/lijiamu/下载/Lab_newbie_task/myshell/myexec.cpp
+myexec.h
+/home/lijiamu/下载/Lab_newbie_task/myshell/myexec.h
+myio.h
+/home/lijiamu/下载/Lab_newbie_task/myshell/myio.h
+unistd.h
 -
 cstdlib
 -
+cstring
+-
+cstdio
+-
 signal.h
 -
-unistd.h
+sys/stat.h
 -
-myio.h
-/home/lijiamu/下载/Lab_newbie_task/myshell/myio.h
-myexec.h
-/home/lijiamu/下载/Lab_newbie_task/myshell/myexec.h
+sys/types.h
+-
+sys/wait.h
+-
+fcntl.h
+-
+errno.h
+-
+bin/builtin.h
+/home/lijiamu/下载/Lab_newbie_task/myshell/bin/builtin.h
 
 /home/lijiamu/下载/Lab_newbie_task/myshell/myexec.h
 sys/types.h

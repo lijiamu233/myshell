@@ -14,7 +14,7 @@
 #include "bin/builtin.h"
 
 pid_t ppid, wpid;
-
+int Num_bg;
 void Returnfather()
 {
     kill(ppid, SIGINT);
@@ -50,6 +50,13 @@ int myexec_extern(char **command, bool isbg)
             }while (!WIFEXITED(ret) && !WIFSIGNALED(ret));
 
             signal(SIGINT, SIG_IGN);
+        }
+        else
+        {
+            Num_bg++;
+            printf("[%d] %d ", Num_bg, ppid);
+            for (int i = 0; command[i]; i++) if(strcmp(command[i],"&")) printf("%s ", command[i]);
+            putchar('\n');
         }
     }
     return ret;
