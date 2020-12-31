@@ -55,8 +55,6 @@ int myexec_extern(char **command, bool isbg)
         {
             Num_bg++;
             printf("[%d] %d ", Num_bg, ppid);
-            for (int i = 0; command[i]; i++) if(strcmp(command[i],"&")) printf("%s ", command[i]);
-            putchar('\n');
         }
     }
     return ret;
@@ -72,7 +70,11 @@ int isbuiltin(char *cmd)
 int myexec_bin(char **command,int type)
 {
     signal(SIGINT, SIG_DFL);
-    if(command == nullptr || command[0] == nullptr) return 0;
+    if(command == nullptr || command[0] == nullptr)
+    {
+        signal(SIGINT, SIG_IGN);
+        return 0;
+    }
     int ret = 0;
     bool Canexe = true;
     errno = 0;

@@ -21,5 +21,6 @@ add_executable(rm adv/rm.cpp)
 add_executable(cp adv/cp.cpp)
 add_executable(xargs adv/xargs.cpp)
 add_executable(mv adv/mv.cpp)
+add_executable(ln adv/ln.cpp)
 
 target_link_libraries(myshell readline)

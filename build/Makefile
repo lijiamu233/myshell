@@ -130,6 +130,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named ln
+
+# Build rule for target.
+ln: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ln
+.PHONY : ln
+
+# fast build rule for target.
+ln/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ln.dir/build.make CMakeFiles/ln.dir/build
+.PHONY : ln/fast
+
+#=============================================================================
 # Target rules for targets named mv
 
 # Build rule for target.
@@ -299,6 +312,33 @@ adv/cp.s: adv/cp.cpp.s
 adv/cp.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cp.dir/build.make CMakeFiles/cp.dir/adv/cp.cpp.s
 .PHONY : adv/cp.cpp.s
+
+adv/ln.o: adv/ln.cpp.o
+
+.PHONY : adv/ln.o
+
+# target to build an object file
+adv/ln.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ln.dir/build.make CMakeFiles/ln.dir/adv/ln.cpp.o
+.PHONY : adv/ln.cpp.o
+
+adv/ln.i: adv/ln.cpp.i
+
+.PHONY : adv/ln.i
+
+# target to preprocess a source file
+adv/ln.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ln.dir/build.make CMakeFiles/ln.dir/adv/ln.cpp.i
+.PHONY : adv/ln.cpp.i
+
+adv/ln.s: adv/ln.cpp.s
+
+.PHONY : adv/ln.s
+
+# target to generate assembly for a file
+adv/ln.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ln.dir/build.make CMakeFiles/ln.dir/adv/ln.cpp.s
+.PHONY : adv/ln.cpp.s
 
 adv/ls.o: adv/ls.cpp.o
 
@@ -688,6 +728,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... cat"
 	@echo "... cp"
+	@echo "... ln"
 	@echo "... ls"
 	@echo "... mkdir"
 	@echo "... mv"
@@ -701,6 +742,9 @@ help:
 	@echo "... adv/cp.o"
 	@echo "... adv/cp.i"
 	@echo "... adv/cp.s"
+	@echo "... adv/ln.o"
+	@echo "... adv/ln.i"
+	@echo "... adv/ln.s"
 	@echo "... adv/ls.o"
 	@echo "... adv/ls.i"
 	@echo "... adv/ls.s"

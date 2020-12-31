@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lijiamu/下载/Lab_newbie_task/myshell/adv/ln.cpp
+unistd.h
+-
+cstdio
+-
+cstdlib
+-
+cstring
+-
+sys/stat.h
+-
+sys/types.h
+-
+libgen.h
+-
+dirent.h
+-
+

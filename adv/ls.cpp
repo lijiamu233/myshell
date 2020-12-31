@@ -65,7 +65,12 @@ void Out(dirent* file, const char* path)
     ctime_r(&buf.st_mtim.tv_sec, msg);
     n = strlen(msg);
     msg[n-1] = 0;
-    printf(" %s %s\n", msg, file->d_name);
+    printf(" %s %s", msg, file->d_name);
+    char lk[1024];
+    memset(lk, 0, sizeof(lk));
+    if(type == 'l' && readlink(file->d_name, lk, 1024) > 0)
+        printf(" -> %s\n", lk);
+    else printf("\n");
 }
 bool more, first;
 int ls(const char* path)

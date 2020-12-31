@@ -11,17 +11,22 @@ bool readin(char** buf, char delim)
         free(*buf), *buf = nullptr;
     int len = 1024;
     char* buffer = (char *)malloc(sizeof(char) * len);
-    int tot = 0,ch = getchar();
-    while(ch != EOF && ch != delim)
+    int tot = 0,ch;
+    while((ch = getchar()) != EOF)
     {
         if(tot == len)
         {
             len += 1024;
             buffer = (char*)realloc(buffer, sizeof(char) * len);
         }
+        if(ch == delim)
+            {
+                buffer[tot++] = ' ';
+                continue;
+            }  
         buffer[tot++] = ch;
     }
-    buffer[tot] = '\0';
+    buffer[tot] = 0;
     *buf = buffer;
     return tot;
 }
@@ -31,7 +36,7 @@ int main(int argc, char** argv)
     int ret = 0;
     int position = 1;
     if(argc > 1)
-        if(!strcmp(argv[0], "-d"))
+        if(!strcmp(argv[1], "-d"))
         {
             if(!argv[2])
             {
@@ -56,7 +61,7 @@ int main(int argc, char** argv)
     memcpy(new_argv, argv, sizeof(char*)*argc);
     new_argv[argc] = new_argv[argc+1] = 0;
     argv = new_argv;
-    if(!argv[1])
+    if(!argv[position])
     {
         argv[argc++] = "echo";
         argv[argc] = argv[argc+1] = 0;
@@ -87,5 +92,5 @@ int main(int argc, char** argv)
         }
         ret |= sta;
     }
-    return ret;
+    return ret;    
 }

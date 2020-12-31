@@ -14,18 +14,17 @@
 #define FD_STDOUT 1
 #define FD_STDERR 2
 FILE* stream[3];
-char* myreadline(FILE* in)
+char* myreadline()
 {
     char *rd = nullptr;
     struct passwd *pwd = getpwuid(getuid());
-    printf("\n\033[34m# ");
-    printf("\033[34m%s",pwd->pw_name);
-    printf("\033[37m @ ");
-    printf("\033[32m%s",pwd->pw_dir);
-    printf("\033[37m in ");
-    printf("\033[33m%s\n",get_current_dir_name());
-    printf("\033[31m$ ");
-    rd = readline("\33[0m");
+    printf("\001\033[34m\002# ");
+    printf("\001\033[34m\002%s",pwd->pw_name);
+    printf("\001\033[37m\002 @ ");
+    printf("\001\033[32m\002%s",pwd->pw_dir);
+    printf("\001\033[37m\002 in ");
+    printf("\001\033[33m\002%s\n",get_current_dir_name());
+    rd = readline("\001\033[31m\002$ \001\33[0m\002");
     return rd;
 }
 
@@ -69,7 +68,7 @@ void Print(char *s)
     fprintf(stream[FD_STDOUT], "%s", s);
 }
 
-void Flush(char *s)
+void Flush()
 {
     fflush(stream[FD_STDOUT]);
 }

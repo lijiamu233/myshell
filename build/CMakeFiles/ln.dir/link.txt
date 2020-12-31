@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/ln.dir/adv/ln.cpp.o -o bin/ln 

@@ -2,12 +2,15 @@
 #include <cstdlib>
 #include <signal.h>
 #include <unistd.h>
+#include <readline/readline.h>
+#include <readline/history.h>
 
 #include "myio.h"
 #include "myexec.h"
 extern FILE* stream[3];
 int main()
 {
+    read_history(NULL);
     stream[0] = stdin;
     stream[1] = stdout;
     stream[2] = stderr;
@@ -30,8 +33,11 @@ int main()
     do
     {
         char *rd;
-        rd = myreadline(stdin);
+        rd = myreadline();
         if(!rd) break;
+        Flush();
+        fflush(stdin);
+        add_history(rd);
         char **command = mydealstring(rd);
         int k = myexec_bin(command, -1);
         //execvp(command[0],command);
@@ -39,6 +45,7 @@ int main()
         free(rd);
         free(command);
     }while(true);
+    write_history(NULL);
     return 0;
 }
 //export PATH=/home/lijiamu/下载/Lab_newbie_task/myshell/build/bin:/usr/local/bin:/usr/bin:/bin
