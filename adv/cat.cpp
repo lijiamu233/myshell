@@ -17,8 +17,18 @@ void show(int f)
     while (len = read(f, buf, 1024))
     {
         if (len <= 0) break;
-        write(STDOUT_FILENO, buf, len);
+        write(STDOUT_FILENO, buf, len+1);
+        if(buf[len-1] != '\n')
+            printf("\001\033[1m\33[7m\002%\001\33[0m\002\n");
     }
+}
+bool JudgeDir(char* dir)
+{
+    struct stat buf;
+    stat(dir, &buf);
+    if((buf.st_mode & __S_IFMT) == __S_IFDIR)
+        return true;
+    return false;
 }
 int main(int argc, char** argv)
 {
@@ -28,11 +38,16 @@ int main(int argc, char** argv)
     {
         for (int i = 1; i < argc; i++)
         {
-            int f = open(argv[i], O_RDONLY);
-            if (f > 0)
+            if(JudgeDir(argv[i]))
+                printf("cat: %s is a directory\n",argv[i]);
+            else if(access(argv[i], F_OK) != -1)
             {
-                show(f);
-                close(f);
+                int f = open(argv[i], O_RDONLY);
+                if (f > 0)
+                {
+                    show(f);
+                    close(f);
+                }
             }
             else
                 perror("cat");
