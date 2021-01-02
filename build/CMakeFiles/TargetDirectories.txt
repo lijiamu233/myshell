@@ -2,6 +2,7 @@
 /home/lijiamu/下载/Lab_newbie_task/myshell/build/CMakeFiles/mv.dir
 /home/lijiamu/下载/Lab_newbie_task/myshell/build/CMakeFiles/xargs.dir
 /home/lijiamu/下载/Lab_newbie_task/myshell/build/CMakeFiles/edit_cache.dir
+/home/lijiamu/下载/Lab_newbie_task/myshell/build/CMakeFiles/more.dir
 /home/lijiamu/下载/Lab_newbie_task/myshell/build/CMakeFiles/cp.dir
 /home/lijiamu/下载/Lab_newbie_task/myshell/build/CMakeFiles/rm.dir
 /home/lijiamu/下载/Lab_newbie_task/myshell/build/CMakeFiles/mkdir.dir

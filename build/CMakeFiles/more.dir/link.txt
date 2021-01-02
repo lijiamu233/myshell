@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/more.dir/adv/more.cpp.o -o bin/more 

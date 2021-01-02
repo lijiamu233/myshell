@@ -17,7 +17,7 @@ void show(int f)
     while (len = read(f, buf, 1024))
     {
         if (len <= 0) break;
-        write(STDOUT_FILENO, buf, len+1);
+        write(STDOUT_FILENO, buf, len);
         if(buf[len-1] != '\n')
             printf("\001\033[1m\33[7m\002%\001\33[0m\002\n");
     }

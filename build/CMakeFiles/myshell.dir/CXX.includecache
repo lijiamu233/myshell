@@ -8,25 +8,37 @@
 
 /home/lijiamu/下载/Lab_newbie_task/myshell/bin/builtin.h
 
-/home/lijiamu/下载/Lab_newbie_task/myshell/myio.cpp
-cstdio
+/home/lijiamu/下载/Lab_newbie_task/myshell/myexec.cpp
+myexec.h
+/home/lijiamu/下载/Lab_newbie_task/myshell/myexec.h
+myio.h
+/home/lijiamu/下载/Lab_newbie_task/myshell/myio.h
+unistd.h
 -
 cstdlib
 -
-readline/readline.h
--
-readline/history.h
--
 cstring
 -
-unistd.h
+cstdio
 -
-pwd.h
+signal.h
 -
-myio.h
-/home/lijiamu/下载/Lab_newbie_task/myshell/myio.h
+sys/stat.h
+-
+sys/types.h
+-
+sys/wait.h
+-
+fcntl.h
+-
+errno.h
+-
 bin/builtin.h
 /home/lijiamu/下载/Lab_newbie_task/myshell/bin/builtin.h
+
+/home/lijiamu/下载/Lab_newbie_task/myshell/myexec.h
+sys/types.h
+-
 
 /home/lijiamu/下载/Lab_newbie_task/myshell/myio.h
 cstdio

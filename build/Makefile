@@ -169,6 +169,19 @@ xargs/fast:
 .PHONY : xargs/fast
 
 #=============================================================================
+# Target rules for targets named more
+
+# Build rule for target.
+more: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 more
+.PHONY : more
+
+# fast build rule for target.
+more/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/more.dir/build.make CMakeFiles/more.dir/build
+.PHONY : more/fast
+
+#=============================================================================
 # Target rules for targets named cp
 
 # Build rule for target.
@@ -393,6 +406,33 @@ adv/mkdir.s: adv/mkdir.cpp.s
 adv/mkdir.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mkdir.dir/build.make CMakeFiles/mkdir.dir/adv/mkdir.cpp.s
 .PHONY : adv/mkdir.cpp.s
+
+adv/more.o: adv/more.cpp.o
+
+.PHONY : adv/more.o
+
+# target to build an object file
+adv/more.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/more.dir/build.make CMakeFiles/more.dir/adv/more.cpp.o
+.PHONY : adv/more.cpp.o
+
+adv/more.i: adv/more.cpp.i
+
+.PHONY : adv/more.i
+
+# target to preprocess a source file
+adv/more.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/more.dir/build.make CMakeFiles/more.dir/adv/more.cpp.i
+.PHONY : adv/more.cpp.i
+
+adv/more.s: adv/more.cpp.s
+
+.PHONY : adv/more.s
+
+# target to generate assembly for a file
+adv/more.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/more.dir/build.make CMakeFiles/more.dir/adv/more.cpp.s
+.PHONY : adv/more.cpp.s
 
 adv/mv.o: adv/mv.cpp.o
 
@@ -731,6 +771,7 @@ help:
 	@echo "... ln"
 	@echo "... ls"
 	@echo "... mkdir"
+	@echo "... more"
 	@echo "... mv"
 	@echo "... myshell"
 	@echo "... rm"
@@ -751,6 +792,9 @@ help:
 	@echo "... adv/mkdir.o"
 	@echo "... adv/mkdir.i"
 	@echo "... adv/mkdir.s"
+	@echo "... adv/more.o"
+	@echo "... adv/more.i"
+	@echo "... adv/more.s"
 	@echo "... adv/mv.o"
 	@echo "... adv/mv.i"
 	@echo "... adv/mv.s"

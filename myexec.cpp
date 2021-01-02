@@ -54,14 +54,14 @@ int myexec_extern(char **command, bool isbg)
         else
         {
             Num_bg++;
-            printf("[%d] %d ", Num_bg, ppid);
+            printf("[%d] %d \n", Num_bg, ppid);
         }
     }
     return ret;
 }
 int isbuiltin(char *cmd)
 {
-    char bin[6][10]={"echo", "cd", "pwd", "kill", "export","exit"};
+    char bin[6][10]={"echo", "cd", "pwd", "kill", "export", "exit"};
     for(int i = 0; i < 6; i++)
         if(!strcmp(cmd,bin[i]))
             return i;
@@ -84,10 +84,10 @@ int myexec_bin(char **command,int type)
     //if it has '&' means background
     bool isbg = false;
     for(int i = 0; command[i] != nullptr; i++)
-    if(!strcmp(command[i],"&"))
+    if(!strcmp(command[i], "&"))
     {
         isbg = true;
-        command[i] == nullptr;
+        command[i] = nullptr;
         for(int j = i; command[j+1] != nullptr; j++)
             command[j] = command[j+1];
         break;

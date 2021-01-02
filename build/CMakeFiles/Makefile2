@@ -75,6 +75,7 @@ CMAKE_BINARY_DIR = /home/lijiamu/下载/Lab_newbie_task/myshell/build
 all: CMakeFiles/ln.dir/all
 all: CMakeFiles/mv.dir/all
 all: CMakeFiles/xargs.dir/all
+all: CMakeFiles/more.dir/all
 all: CMakeFiles/cp.dir/all
 all: CMakeFiles/rm.dir/all
 all: CMakeFiles/mkdir.dir/all
@@ -94,6 +95,7 @@ preinstall:
 clean: CMakeFiles/ln.dir/clean
 clean: CMakeFiles/mv.dir/clean
 clean: CMakeFiles/xargs.dir/clean
+clean: CMakeFiles/more.dir/clean
 clean: CMakeFiles/cp.dir/clean
 clean: CMakeFiles/rm.dir/clean
 clean: CMakeFiles/mkdir.dir/clean
@@ -138,7 +140,7 @@ CMakeFiles/ln.dir/clean:
 CMakeFiles/mv.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mv.dir/build.make CMakeFiles/mv.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mv.dir/build.make CMakeFiles/mv.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lijiamu/下载/Lab_newbie_task/myshell/build/CMakeFiles --progress-num=11,12 "Built target mv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lijiamu/下载/Lab_newbie_task/myshell/build/CMakeFiles --progress-num=13,14 "Built target mv"
 .PHONY : CMakeFiles/mv.dir/all
 
 # Build rule for subdir invocation for target.
@@ -165,7 +167,7 @@ CMakeFiles/mv.dir/clean:
 CMakeFiles/xargs.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/xargs.dir/build.make CMakeFiles/xargs.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/xargs.dir/build.make CMakeFiles/xargs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lijiamu/下载/Lab_newbie_task/myshell/build/CMakeFiles --progress-num=26,27 "Built target xargs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lijiamu/下载/Lab_newbie_task/myshell/build/CMakeFiles --progress-num=28,29 "Built target xargs"
 .PHONY : CMakeFiles/xargs.dir/all
 
 # Build rule for subdir invocation for target.
@@ -184,6 +186,33 @@ xargs: CMakeFiles/xargs.dir/rule
 CMakeFiles/xargs.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/xargs.dir/build.make CMakeFiles/xargs.dir/clean
 .PHONY : CMakeFiles/xargs.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/more.dir
+
+# All Build rule for target.
+CMakeFiles/more.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/more.dir/build.make CMakeFiles/more.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/more.dir/build.make CMakeFiles/more.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lijiamu/下载/Lab_newbie_task/myshell/build/CMakeFiles --progress-num=11,12 "Built target more"
+.PHONY : CMakeFiles/more.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/more.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lijiamu/下载/Lab_newbie_task/myshell/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/more.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lijiamu/下载/Lab_newbie_task/myshell/build/CMakeFiles 0
+.PHONY : CMakeFiles/more.dir/rule
+
+# Convenience name for target.
+more: CMakeFiles/more.dir/rule
+
+.PHONY : more
+
+# clean rule for target.
+CMakeFiles/more.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/more.dir/build.make CMakeFiles/more.dir/clean
+.PHONY : CMakeFiles/more.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/cp.dir
@@ -219,7 +248,7 @@ CMakeFiles/cp.dir/clean:
 CMakeFiles/rm.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rm.dir/build.make CMakeFiles/rm.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rm.dir/build.make CMakeFiles/rm.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lijiamu/下载/Lab_newbie_task/myshell/build/CMakeFiles --progress-num=22,23 "Built target rm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lijiamu/下载/Lab_newbie_task/myshell/build/CMakeFiles --progress-num=24,25 "Built target rm"
 .PHONY : CMakeFiles/rm.dir/all
 
 # Build rule for subdir invocation for target.
@@ -300,7 +329,7 @@ CMakeFiles/ls.dir/clean:
 CMakeFiles/touch.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/touch.dir/build.make CMakeFiles/touch.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/touch.dir/build.make CMakeFiles/touch.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lijiamu/下载/Lab_newbie_task/myshell/build/CMakeFiles --progress-num=24,25 "Built target touch"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lijiamu/下载/Lab_newbie_task/myshell/build/CMakeFiles --progress-num=26,27 "Built target touch"
 .PHONY : CMakeFiles/touch.dir/all
 
 # Build rule for subdir invocation for target.
@@ -354,7 +383,7 @@ CMakeFiles/cat.dir/clean:
 CMakeFiles/myshell.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/myshell.dir/build.make CMakeFiles/myshell.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/myshell.dir/build.make CMakeFiles/myshell.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lijiamu/下载/Lab_newbie_task/myshell/build/CMakeFiles --progress-num=13,14,15,16,17,18,19,20,21 "Built target myshell"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lijiamu/下载/Lab_newbie_task/myshell/build/CMakeFiles --progress-num=15,16,17,18,19,20,21,22,23 "Built target myshell"
 .PHONY : CMakeFiles/myshell.dir/all
 
 # Build rule for subdir invocation for target.
